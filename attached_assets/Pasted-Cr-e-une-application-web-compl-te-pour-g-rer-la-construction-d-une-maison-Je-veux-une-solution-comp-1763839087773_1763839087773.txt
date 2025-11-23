@@ -1,0 +1,157 @@
+Crée une application web complète pour gérer la construction d'une maison. Je veux une solution complète front-end + back-end + base de données. Déploie-la automatiquement au besoin. Voici les spécifications :
+
+🔶 Objectif global
+
+Je veux une application simple qui me permet de suivre :
+
+Les matériaux achetés (ciment, fer, sable, tôles, etc.)
+
+Les maçons et leur temps de travail
+
+Les avances, paiements, frais de déjeuner et salaires
+
+Les totaux et rapports (combien dépensé en matériaux, combien payé aux maçons)
+
+🔶 Technologies
+
+Utilise :
+
+Frontend : React (Vite ou Create React App)
+
+Backend : Node.js + Express
+
+Base de données : SQLite (local file)
+
+ORM : Prisma (si possible)
+
+API REST
+
+Structure en monorepo si nécessaire.
+
+🔶 Fonctionnalités demandées
+🧱 1. Gestion des matériaux
+
+Créer les fonctionnalités suivantes :
+
+Ajouter un matériau (nom)
+
+Ajouter un achat :
+
+matériau sélectionné
+
+date de l’achat
+
+quantité
+
+prix total
+
+Voir tous les achats
+
+Calculer :
+
+total dépensé par matériau
+
+total des matériaux
+
+Page : “Matériaux”
+
+Page : “Historique achats”
+
+👷 2. Gestion des maçons
+
+Chaque maçon doit avoir :
+
+Nom
+
+Salaire journalier ou hebdomadaire (variable selon la personne)
+
+Journées travaillées (date + nombre d’heures ou journée entière)
+
+Avances reçues (date + montant)
+
+Argent donné pour déjeuner ou transport
+
+Calculs automatiques :
+
+Total journées travaillées × salaire
+
+Total avances
+
+Total repas
+
+Total payé
+
+Solde restant à payer
+
+Pages nécessaires :
+
+Liste des maçons
+
+Détails d’un maçon (tous ses mouvements)
+
+Ajouter journée
+
+Ajouter avance
+
+Ajouter repas
+
+Rapports
+
+📊 3. Tableau de bord (dashboard)
+
+Créer un dashboard global avec :
+
+Total dépensé matériaux
+
+Total payé aux maçons
+
+Total avances
+
+Total dépenses repas
+
+Solde global construction
+
+🔶 Design & UX
+
+Interface simple, responsive, mobile-friendly
+
+Boutons d’ajout clair : “+ Ajouter matériau”, “+ Ajouter jour”, “+ Ajouter avance”, etc.
+
+Utilise Tailwind CSS si possible
+
+🔶 API
+
+Créer une API REST propre avec :
+
+/materials
+/materials/:id
+/purchases
+/masons
+/masons/:id/work
+/masons/:id/advance
+/masons/:id/meal
+/reports/global
+
+🔶 Déploiement
+
+Lancer automatiquement dans Replit
+
+Créer un script npm run dev pour démarrer à la fois le front et le back
+
+Documenter dans le README comment lancer localement
+
+🔶 Livrables attendus
+
+Un projet complet fonctionnel
+
+Code propre
+
+Base SQLite automatique
+
+Interface React complète
+
+Backend Express complet
+
+API testée
+
+Dashboard visible

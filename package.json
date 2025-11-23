@@ -5,19 +5,14 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development tsx server/index-dev.ts",
-
-    "build": "npm run build:all",
-
-    "build:client": "vite build",
-    "build:server": "esbuild server/index-prod.ts --platform=node --packages=external --bundle --format=esm --outfile=dist/index.js",
-
-    "build:all": "npm run build:client && npm run build:server",
-
+    "build": "vite build && esbuild server/index-prod.ts --platform=node --packages=external --bundle --format=esm --outfile=dist/index.js",
     "start": "NODE_ENV=production node dist/index.js",
-    "start:render": "node --es-module-specifier-resolution=node server/index-render.js",
-
     "check": "tsc",
-    "db:push": "drizzle-kit push"
+    "db:push": "drizzle-kit push",
+    "build:client": "npm --prefix client run build",
+    "build:server": "echo 'build server (no build needed for node)'",
+    "build:all": "npm run build:client && npm run build:server",
+    "start:render": "node --es-module-specifier-resolution=node server/index-render.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
