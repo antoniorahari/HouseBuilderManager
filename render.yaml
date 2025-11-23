@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: house-builder-manager
+    env: node
+    plan: free
+    buildCommand: npm run build:all
+    startCommand: node --es-module-specifier-resolution=node server/index-render.js
+    disk:
+      name: persistent
+      path: /data
+      sizeGB: 1
