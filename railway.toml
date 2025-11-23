@@ -1,5 +1,5 @@
 [build]
-command = "npm install && npm run build:all"
+command = "npm install && npm run build"
 
 [start]
-command = "npm run start"
+command = "npm start"
